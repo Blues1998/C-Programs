@@ -1,0 +1,16 @@
+#include <stdio.h>
+#define SIZE 1000
+int main()
+{
+    char string[SIZE];
+    fgets(string, SIZE, stdin);
+    int i = 0,count = 0;
+    while(string[i]!='\n')
+    {
+        if(string[i] == 'a' || string[i] == 'e' || string[i] == 'i' || string[i] == 'o' || string[i] == 'u')
+            count ++;
+        i++;
+    }
+    printf("String has %d vowels.",count);
+    return 0;
+}
